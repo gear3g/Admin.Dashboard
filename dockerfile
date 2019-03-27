@@ -5,7 +5,8 @@ WORKDIR /app
 COPY ./Admin.Dashboard.sln ./nuget.config ./
 COPY ./Admin.Dashboard.Models/Admin.Dashboard.Models.csproj ./Admin.Dashboard.Models/Admin.Dashboard.Models.csproj
 COPY ./Admin.Dashboard.Service/Admin.Dashboard.Service.csproj ./Admin.Dashboard.Service/Admin.Dashboard.Service.csproj
-RUN dotnet restore
+COPY ./docker-compose/docker-compose.dcproj ./docker-compose/docker-compose.dcproj
+RUN dotnet restore ./Admin.Dashboard.sln
 
 # Copy everything else and build
 COPY . ./
