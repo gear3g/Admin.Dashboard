@@ -29,7 +29,7 @@ namespace Admin.Dashboard.Service
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddSwaggerGen(options => {
-                options.SwaggerDoc("V1", new Info {
+                options.SwaggerDoc("v1", new Info {
                     Version = "v1",
                     Title = "API for Admin.Dashboard",
                     Description = "API to be used for de Admin Dashboard"
@@ -55,7 +55,7 @@ namespace Admin.Dashboard.Service
 
             app.UseSwagger();
             app.UseSwaggerUI(options => {
-                options.SwaggerEndpoint("swagger/v1/swagger.json", "API Admin.Dashboard V1");
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "API Admin.Dashboard V1");
             });
         }
     }
