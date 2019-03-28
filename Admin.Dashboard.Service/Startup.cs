@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace Admin.Dashboard.Service
 {
@@ -26,6 +27,14 @@ namespace Admin.Dashboard.Service
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddSwaggerGen(options => {
+                options.SwaggerDoc("V1", new Info {
+                    Version = "v1",
+                    Title = "API for Admin.Dashboard",
+                    Description = "API to be used for de Admin Dashboard"
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,6 +52,11 @@ namespace Admin.Dashboard.Service
 
             app.UseHttpsRedirection();
             app.UseMvc();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(options => {
+                options.SwaggerEndpoint("swagger/v1/swagger.json", "API Admin.Dashboard V1");
+            });
         }
     }
 }
