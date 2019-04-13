@@ -1,11 +1,11 @@
 using System;
 
-namespace Admin.Dashboard.Common.Repository
+namespace Admin.Dashboard.Utils.Repository
 {
     public interface IUnitOfWrok : IDisposable
     {
         void Commit();
-        
+
         void Rollback();
     }
 }

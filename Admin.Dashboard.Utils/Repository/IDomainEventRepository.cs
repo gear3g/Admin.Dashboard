@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using Admin.Dashboard.Common.Domain;
+using Admin.Dashboard.Utils.Domain;
 
-namespace Admin.Dashboard.Common.Repository
+namespace Admin.Dashboard.Utils.Repository
 {
     public interface IDomainEventRepository
     {

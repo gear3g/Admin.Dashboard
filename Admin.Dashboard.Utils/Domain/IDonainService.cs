@@ -1,4 +1,4 @@
-namespace Admin.Dashboard.Common.Domain
+namespace Admin.Dashboard.Utils.Domain
 {
     public interface IDomainSerivce
     {

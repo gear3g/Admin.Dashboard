@@ -1,4 +1,4 @@
-namespace Admin.Dashboard.Common.Logging
+namespace Admin.Dashboard.Utils.Logging
 {
     public interface IRequestCorrelationIdentifier
     {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using Admin.Dashboard.Common.Domain;
-using Admin.Dashboard.Common.Specification;
+using Admin.Dashboard.Utils.Domain;
+using Admin.Dashboard.Utils.Specification;
 
-namespace Admin.Dashboard.Common.Repository
+namespace Admin.Dashboard.Utils.Repository
 {
     public interface IRepository<TEntity>
         where TEntity : IAggregateRoot

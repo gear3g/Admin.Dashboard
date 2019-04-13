@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Castle.Windsor;
 
-namespace Admin.Dashboard.Common.Domain
+namespace Admin.Dashboard.Utils.Domain
 {
     public static class DomainEvents
     {
