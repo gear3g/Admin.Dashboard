@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Admin.Dashboard.Common.Domain
+namespace Admin.Dashboard.Utils.Domain
 {
     public abstract class DomainEvent
     {

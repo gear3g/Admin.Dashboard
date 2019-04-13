@@ -1,7 +1,7 @@
-using Admin.Dashboard.Common.Logging;
-using Admin.Dashboard.Common.Repository;
+using Admin.Dashboard.Utils.Logging;
+using Admin.Dashboard.Utils.Repository;
 
-namespace Admin.Dashboard.Common.Domain
+namespace Admin.Dashboard.Utils.Domain
 {
     public class DomainEventHandle<TDomainEvent> : Handles<TDomainEvent>
         where TDomainEvent : DomainEvent
